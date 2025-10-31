@@ -3,9 +3,6 @@
 import os
 import logging
 from typing import Optional
-from dotenv import load_dotenv
-
-load_dotenv()
 
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
 numeric_level = getattr(logging, LOG_LEVEL, None)

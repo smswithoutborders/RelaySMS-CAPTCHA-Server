@@ -3,10 +3,8 @@
 import os
 import base64
 from typing import Optional
-from dotenv import load_dotenv
 from logutils import get_logger
 
-load_dotenv()
 logger = get_logger(__name__)
 
 
