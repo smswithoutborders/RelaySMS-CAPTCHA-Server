@@ -144,8 +144,6 @@ def verify_token(req: VerifyTokenRequest):
             message="CAPTCHA challenge has not been solved yet.",
         )
 
-    print("token", token)
-    print("c-token", cache_entry.token)
     if not cache_entry.token == token:
         logger.error("Invalid token for challenge_id: %s ", challenge_id)
         return VerifyTokenResponse(success=False, message="Invalid token provided.")
